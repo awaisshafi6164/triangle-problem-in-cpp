@@ -69,18 +69,21 @@ int main()
     int gd=DETECT,gm;
     initgraph(&gd,&gm,"");
 
-    line(vec2[0], 50, vec2[2], 50);
-    line(vec2[1], 100, vec2[0], 50);
-    line(vec2[2], 50, vec2[1], 100);
+    line(vec2[0], 0, vec2[2], 0);
+    line(vec2[1], 100, vec2[0], 0);
+    line(vec2[2], 0, vec2[1], 100);
 
-    if(no <= 100 && no >= vec2[0]){
-            line(vec2[0], no, 200, 75);
+    if(no >= vec2[0] && no <= 100){
+            line(vec2[0], no, 200, no);
+            line(vec2[0], no, vec2[1], no);
     }
-    else if(no < vec2[0] && no >= vec2[2]){
-            line(no, 75, 0, 75);
+    else if(no >= vec2[1] && no < vec2[0]){
+            line(vec2[1], no, 0, no);
     }
-    else if(no < vec2[2] && no >= 1){
-            line(no+vec2[2], 50, no+vec2[2], 0);
+    else if(no >= vec2[2] && no < vec2[1]){
+            line(no, 50, no, 0);
+    }else{
+        cout<<"\n\nIt does not lie in triangle.\n";
     }
 
     getch();
