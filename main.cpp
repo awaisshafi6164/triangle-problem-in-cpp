@@ -31,16 +31,13 @@ int main()
     int x0 = 0;
     cout<<"Enter any Number (x0) (0 - 100): ";
     cin>>x0;
-    int y0 = 0;
-    cout<<"Enter any Number (y0) (0 - 100): ";
-    cin>>y0;
 
     double A, A1, A2, A3;
 
     A = area(vec[2], vec[2], vec[1], 0, vec[0], vec[0]);
-    A1 = area(x0, y0, vec[1], 0, vec[0], vec[0]);
-    A2 = area(vec[2], vec[2], x0, y0, vec[0], vec[0]);
-    A3 = area(vec[2], vec[2], vec[1], 0, x0, y0);
+    A1 = area(x0, x0, vec[1], 0, vec[0], vec[0]);
+    A2 = area(vec[2], vec[2], x0, x0, vec[0], vec[0]);
+    A3 = area(vec[2], vec[2], vec[1], 0, x0, x0);
 
     cout<<"Area Of Triangle: "<< A <<endl;
     cout<<"A = A1 + A2 + A3 = "<< A1 + A2 + A3<<endl;
@@ -57,7 +54,7 @@ int main()
 
     int c = 100;
 
-    circle(x0+c, y0+c, 2);
+    circle(x0+c, x0+c, 2);
 
     line(vec[2]+c, vec[2]+c, vec[1]+c, 0+c);
     line(vec[1]+c, 0+c, vec[0]+c, vec[0]+c);
