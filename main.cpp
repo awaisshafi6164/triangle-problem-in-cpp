@@ -55,14 +55,6 @@ int main()
     int gd=DETECT,gm;
     initgraph(&gd,&gm,"");
 
-    /*
-    circle(x0, y0, 2);
-
-    line(vec[2], vec[2], vec[1], 0);
-    line(vec[1], 0, vec[0], vec[0]);
-    line(vec[0], vec[0], vec[2], vec[2]);
-    */
-
     int c = 100;
 
     circle(x0+c, y0+c, 2);
