@@ -29,11 +29,11 @@ int main()
     cout<<"Random Generated Values after sorting: "<<vec[0]<<", "<<vec[1]<<", "<<vec[2]<<"\n";
 
     int x0 = 0;
-    cout<<"Enter any Number (x0) (0 - 100): ";
+    cout<<"Enter any Number (x0): ";
     cin>>x0;
 
     int y0 = 0;
-    cout<<"Enter any Number (y0) (0 - 100): ";
+    cout<<"Enter any Number (y0): ";
     cin>>y0;
 
     double A, A1, A2, A3;
