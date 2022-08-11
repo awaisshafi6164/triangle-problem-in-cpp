@@ -12,7 +12,7 @@ double area(int x1, int y1, int x2, int y2, int x3, int y3)
 
 int main()
 {
-    cout<<"\tTriangle Problem\n\n";
+    cout<<"\t\tTriangle Problem\n\n";
 
     srand(time(0));
 
@@ -46,13 +46,6 @@ int main()
     cout<<"Area Of Triangle: "<< A <<endl;
     cout<<"A = A1 + A2 + A3 = "<< A1 + A2 + A3<<endl;
 
-    if(A == (A1 + A2 + A3)){
-        cout<<"Given point lies inside the triangle.\n\n";
-    }
-    else{
-        cout<<"Given triangle lies outside the triangle.\n\n";
-    }
-
     int gd=DETECT,gm;
     initgraph(&gd,&gm,"");
 
@@ -64,6 +57,14 @@ int main()
     line(vec[1]+c, 0+c, vec[0]+c, vec[0]+c);
     line(vec[0]+c, vec[0]+c, vec[2]+c, vec[2]+c);
 
+    if(A == (A1 + A2 + A3)){
+        outtextxy(50, 250, "Given point lies 'INSIDE' the triangle.");
+    }
+    else{
+        outtextxy(50, 250, "Given point lies 'OUTSIDE' the triangle.");
+    }
+
     getch();
+    closegraph();
     return 0;
 }
